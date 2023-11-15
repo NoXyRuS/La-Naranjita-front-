@@ -1,0 +1,262 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/principal">
+
+    <LinearLayout
+        android:id="@+id/linearParte1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="horizontal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtPrincipal"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="@string/buenos"
+                android:fontFamily="@font/raleway_bold"
+                android:textStyle="bold"
+                android:textColor="@color/search"
+                android:textSize="30sp"
+                android:layout_marginTop="8sp"/>
+
+        </LinearLayout>
+
+        <Button
+            android:id="@+id/button"
+            android:layout_width="80dp"
+            android:layout_height="50dp"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            android:background="@drawable/rounded_button"
+            app:icon="@drawable/ic_shop"
+            android:contentDescription="Botón de compra"/>
+
+    </LinearLayout>
+
+    <SearchView
+        android:id="@+id/searchView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearParte1"
+        android:layout_margin="16dp"
+        android:queryHint="@string/search_hint"
+        android:background="@color/search"
+        android:imeOptions="actionSearch"
+        android:inputType="text"
+        app:iconifiedByDefault="false"
+        app:searchIcon="@drawable/ic_search"
+        app:closeIcon="@drawable/ic_filter" />
+
+    <LinearLayout
+        android:id="@+id/linearParte2"
+        android:layout_width="match_parent"
+        android:layout_height="100dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/searchView"
+        android:orientation="vertical">
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Categories"
+            android:fontFamily="@font/raleway_bold"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="8dp">
+
+            <!-- Botón 1 - Pasteles -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Pasteles"
+                android:textColor="@color/white"
+                android:layout_marginEnd="10dp"
+                android:padding="8dp"/>
+
+            <!-- Botón 2 - Postres -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Postres"
+                android:textColor="@color/white"
+                android:layout_marginEnd="10dp"
+                android:padding="8dp"/>
+
+            <!-- Botón 3 - Tratas -->
+            <Button
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="@string/tartas"
+                android:textColor="@color/white"
+                android:padding="8dp"/> <!-- Añadido un relleno para ajustar el tamaño -->
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearParte3"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/linearParte2"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_marginTop="16dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Weekly Offer"
+                android:fontFamily="@font/raleway_bold"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"/>
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="8dp"
+                android:scaleType="centerCrop"
+                android:src="@drawable/naranjita_logo" />
+            <!-- ViewPager para el carrusel de imágenes
+                <androidx.viewpager2.widget.ViewPager2
+                android:id="@+id/viewPager"
+                android:layout_width="match_parent"
+                android:layout_height="150dp"
+                android:layout_marginTop="8dp"/>
+-->
+        </LinearLayout>
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearParte4"
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/linearParte3"
+        android:orientation="horizontal">
+        <!-- Nuevo subtítulo y tarjetas -->
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Top Sellers"
+            android:fontFamily="@font/raleway_bold"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:textSize="20sp"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="8dp"/>
+    </LinearLayout>
+    <LinearLayout
+        android:id="@+id/linearParte5"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:layout_marginStart="20dp"
+        android:layout_marginTop="0dp"
+        android:layout_marginEnd="20dp"
+        android:layout_below="@id/linearParte4"
+        android:orientation="horizontal">
+
+        <!-- Primer CardView con margen a la derecha -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginRight="10dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Contenido del primer CardView -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/naranjita_logo"
+                    android:scaleType="centerCrop"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Now"
+                    android:drawableLeft="@drawable/ic_shop"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:padding="8dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+
+        <!-- Segundo CardView con margen a la izquierda -->
+        <androidx.cardview.widget.CardView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginLeft="10dp"
+            app:cardCornerRadius="8dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical">
+
+                <!-- Contenido del segundo CardView -->
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="150dp"
+                    android:src="@drawable/naranjita_logo"
+                    android:scaleType="centerCrop"/>
+
+                <Button
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="Shop Now"
+                    android:drawableLeft="@drawable/ic_shop"
+                    android:drawablePadding="8dp"
+                    android:textColor="@color/white"
+                    android:gravity="center"
+                    android:padding="8dp"/>
+            </LinearLayout>
+        </androidx.cardview.widget.CardView>
+    </LinearLayout>
+
+</RelativeLayout>

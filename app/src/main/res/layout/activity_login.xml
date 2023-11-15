@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/principal">
+    
+    <LinearLayout
+        android:id="@+id/linearParte1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+        
+        <FrameLayout
+            android:layout_width="match_parent"
+            android:layout_height="240dp">
+            
+            <ImageView
+                android:layout_width="300dp"
+                android:layout_height="128dp"
+                android:layout_gravity="center_horizontal"
+                android:layout_marginTop="55dp"
+                android:src="@drawable/naranjita_logo"/>
+            
+        </FrameLayout>
+    </LinearLayout>
+    
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/linearParte2"
+        android:layout_below="@id/linearParte1"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_bold"
+            android:textSize="20sp"
+            android:textColor="@color/search"
+            android:textStyle="bold"
+            android:gravity="center|center_horizontal"
+            android:text="@string/bienvenida"/>
+        
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_regular"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:gravity="center|center_horizontal"
+            android:text="@string/bienvenida_secondary"/>
+        
+    </LinearLayout>
+    
+    <LinearLayout
+        android:id="@+id/linearParte3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/linearParte2"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="30dp"
+        android:layout_marginEnd="10dp"
+        android:orientation="vertical">
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputEmail"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="48dp"
+            android:hint="@string/email"
+            app:startIconDrawable="@drawable/ic_email"
+            android:background="@drawable/rounded_background"
+            android:layout_marginStart="16dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginTop="16dp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtMail"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:fontFamily="@font/raleway_regular"
+                android:inputType="textEmailAddress"
+                android:textSize="15sp" />
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/txtInputPassword"
+            style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="@string/password"
+            android:background="@drawable/rounded_background"
+            app:startIconDrawable="@drawable/ic_lock"
+            android:layout_marginStart="16sp"
+            android:layout_marginEnd="16sp"
+            android:layout_marginTop="20sp">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edtPassword"
+                android:layout_width="match_parent"
+                android:layout_height="48dp"
+                android:padding="8dp"
+                android:fontFamily="@font/raleway_regular"
+                android:inputType="textPassword"
+                android:textSize="15sp"/>
+
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/linearParte4"
+        android:layout_below="@id/linearParte3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="10dp"
+        android:gravity="center_horizontal">
+
+        <Button
+            android:id="@+id/btnIniciarSesion"
+            android:layout_width="300dp"
+            android:layout_height="48dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginBottom="16dp"
+            android:background="@drawable/rounded_button"
+            android:fontFamily="@font/raleway_bold"
+            android:gravity="center"
+            android:text="@string/start_session"
+            android:textColor="@color/white"
+            android:textSize="16sp"
+            android:textStyle="bold"/>
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:orientation="horizontal"
+        android:id="@+id/linearParte5"
+        android:layout_below="@id/linearParte4"
+        android:layout_width="match_parent"
+        android:layout_marginTop="10dp"
+        android:layout_height="wrap_content">
+
+        <TextView
+            android:id="@+id/txtNuevoUsusario"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/raleway_regular"
+            android:textSize="18sp"
+            android:textStyle="bold"
+            android:textColor="@color/button"
+            android:gravity="center|center_horizontal"
+            android:text="@string/nuevo_user"/>
+
+    </LinearLayout>
+
+</RelativeLayout>
